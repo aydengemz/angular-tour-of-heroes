@@ -13,6 +13,8 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroSearchComponent } from './hero-search.component';
+import { CatService }          from './cat.service';
+import { CatsComponent }      from './cats.component';
 
 @NgModule({
   imports: [
@@ -20,7 +22,7 @@ import { HeroSearchComponent } from './hero-search.component';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
+    
   ],
   declarations: [
     AppComponent,
@@ -28,8 +30,9 @@ import { HeroSearchComponent } from './hero-search.component';
     HeroSearchComponent,
     HeroesComponent,
     HeroDetailComponent,
+    CatsComponent
   ],
-  providers: [HeroService],
+  providers: [HeroService, CatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
