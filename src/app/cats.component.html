@@ -4,6 +4,7 @@
     [class.selected]="cat === selectedCat"
     (click)="onSelect(cat)">
     <span class="badge">{{cat.id}}</span> {{cat.name}}
+    <button class="delete-button" (click)="deleteCat(cat, $event)">Delete</button>
   </li>
 </ul>
 <div *ngIf="selectedCat">

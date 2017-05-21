@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +14,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroSearchComponent } from './hero-search.component';
 import { CatService }          from './cat.service';
 import { CatsComponent }      from './cats.component';
+import {CatDetailComponent} from './cat-detail.component'
 
 @NgModule({
   imports: [
@@ -30,7 +30,8 @@ import { CatsComponent }      from './cats.component';
     HeroSearchComponent,
     HeroesComponent,
     HeroDetailComponent,
-    CatsComponent
+    CatsComponent,
+    CatDetailComponent
   ],
   providers: [HeroService, CatService],
   bootstrap: [AppComponent]
